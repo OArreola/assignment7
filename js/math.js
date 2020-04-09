@@ -15,7 +15,9 @@ $("secMath").addEventListener("click", (event) => {
         window.alert("Please enter a valid number");
       }
     } while (isNaN(num));
-    window.alert("The positive version of " + num + " is: " + Math.abs(num));
+    window.console.log(
+      "The positive version of " + num + " is: " + Math.abs(num)
+    );
   }
 
   //STEP 2
@@ -41,7 +43,7 @@ $("secMath").addEventListener("click", (event) => {
       }
     } while (isNaN(num));
     window.console.log(
-      "The number: " + num + " round up is " + Math.floor(num)
+      "The number: " + num + " round down is " + Math.floor(num)
     );
   }
 

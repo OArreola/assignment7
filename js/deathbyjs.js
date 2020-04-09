@@ -29,7 +29,9 @@ $("secDeath").addEventListener("click", (event) => {
     "use strict";
     let str = window.prompt("Enter a string:");
     let res = str.match(/[aeiouAEIOU]/g);
-    window.console.log("The total count of vowels is " + res.length);
+    window.console.log(
+      'The string: "' + str + '" has ' + res.length + " vowels."
+    );
   }
 
   //STEP 4
@@ -56,13 +58,37 @@ $("secDeath").addEventListener("click", (event) => {
   }
   function step5() {
     "use strict";
-    let str = window.prompt(
-      'Enter a string of names of countries separated by "|"\ni.e: Australia|Germany|United States of America'
+    let str;
+    window.alert(
+      "In this step, you will be asked to enter names of countries\nEnter as many as you want."
     );
-    if (str !== null) {
-      //CONVERT STRING TO ARRAY
-      let arrStr = str.split("|");
-      window.console.log("The longest name is " + longest_country_name(arrStr));
+    let cont;
+    let country_names = [];
+    let cancel;
+    do {
+      cont = false;
+      cancel = false;
+      str = window.prompt(
+        'Enter the name of a country or enter "exit" to continue the step:'
+      );
+      if (str === null) {
+        cancel = true;
+      }
+      if (str === "exit" || str === null) {
+        cont = true;
+      } else {
+        if (str !== "") {
+          country_names.push(str);
+        }
+      }
+    } while (cont === false);
+
+    if (cancel === false) {
+      window.console.log(country_names);
+      //CALL longest_country_name FUNCTION AND DISPLAY RETURNED NAME IN CONSOLE
+      window.console.log(
+        "The longest name is " + longest_country_name(country_names)
+      );
     }
   }
 
