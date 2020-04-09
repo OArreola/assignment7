@@ -30,25 +30,3 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
 }
-
-/*
-  button:disabled {
-    border: 1px solid lightgray;
-    color: lightgray;
-  }
-  
-  input,
-  select,
-  button,
-  a {
-    margin-left: 10px;
-  }
-  
-  a:link,
-  a:hover,
-  a:visited,
-  a:active {
-    color: black;
-  }
-
-  */
